@@ -51,16 +51,16 @@ src/
    git add -A
    git commit -m "Chess SDT experiment"
    git branch -M main
-   git remote add origin https://github.com/<your-user>/chess-sdt.git
+   git remote add origin https://github.com/<your-user>/chess-memory-task.git
    git push -u origin main
    ```
 3. On GitHub go to **Settings → Pages → Build and deployment → Source** and choose
    **GitHub Actions**.
 4. Open the **Actions** tab. The *Deploy to GitHub Pages* workflow runs on each push to
    `main` (you can also start it by hand with *Run workflow*). When it finishes, the site is at
-   `https://<your-user>.github.io/chess-sdt/`.
+   `https://<your-user>.github.io/chess-memory-task/`.
 
-The workflow gets the correct base path (`/chess-sdt`) from `actions/configure-pages` and
+The workflow gets the correct base path (`/chess-memory-task`) from `actions/configure-pages` and
 passes it to the build as `NEXT_PUBLIC_BASE_PATH`, so renaming the repo or using a custom
 domain needs no code changes.
 
@@ -71,7 +71,7 @@ npm install --save-dev gh-pages
 ```
 Add to `package.json` scripts:
 ```json
-"deploy": "NEXT_PUBLIC_BASE_PATH=/chess-sdt next build && touch out/.nojekyll && gh-pages -d out --dotfiles"
+"deploy": "NEXT_PUBLIC_BASE_PATH=/chess-memory-task next build && touch out/.nojekyll && gh-pages -d out --dotfiles"
 ```
 Run `npm run deploy`, then set **Settings → Pages → Source** to *Deploy from a branch*,
 `gh-pages` / `(root)`.
